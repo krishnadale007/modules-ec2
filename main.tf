@@ -16,7 +16,7 @@
 
  # Instance creating in public subnet by calling o/p
 module "my_instance" {
-  source = "./instance"
+  source = "./ec2-instance/"
   instance_cocount = var.instance_count
   ami = var.image_id
   instance_type = var.instance_type
