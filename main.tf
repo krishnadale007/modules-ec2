@@ -1,9 +1,9 @@
- #provider "aws" {
+ provider "aws" {
      region = var.region
    #  shared_config_files      = ["/home/ubuntu/.aws/config"]
     # shared_credentials_files = ["/home/ubuntu/.aws/credentials"]
      #profile                  = "config"
- #}
+ }
 
  terraform {
    backend "s3" {
