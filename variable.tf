@@ -7,7 +7,7 @@ variable "ami" {
   description = "providing the image id to for server creation"
 }
 variable "instance_type" {
-  default = "t2.micro"
+  default = "t3.micro"
   description = "providing the server size to my instance"
 }
 variable "key_name" {
