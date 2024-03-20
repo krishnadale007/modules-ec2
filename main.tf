@@ -14,12 +14,15 @@
    }
  }
 
- modules "aws_instance" "server" {
-   ami = var.ami
-   instance_type = var.instance_type
-   key_name = var.key_name
-   tags = {
-     Name = "HelloWorld"
+ # Instance creating in public subnet by calling o/p
+module "my_instance" {
+  source = "./modules/instance"
+  instance_cocount = var.instance_count
+  ami = var.image_id
+  instance_type = var.instance_type
+  key_name = var.key_name
+  
 }
- }
+
+ 
 
